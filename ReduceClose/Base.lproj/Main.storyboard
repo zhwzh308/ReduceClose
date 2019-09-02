@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yvg-Tu-toH">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="FcC-cz-IYz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yvg-Tu-toH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Pyg-PR-H4o">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VPF-I9-TR0" kind="relationship" relationship="rootViewController" id="5JJ-CF-gym"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xWe-AT-bWs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="742.63392857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="OGf-YR-mvT">
+            <objects>
+                <viewController id="VPF-I9-TR0" customClass="ViewController" customModule="ReduceClose" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R7r-Rq-jca">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XGd-lk-RW6">
+                                <rect key="frame" x="0.0" y="88" width="414" height="198"/>
+                                <subviews>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="J1l-Pq-d62">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <items>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="nF8-jK-MYq"/>
+                                            <barButtonItem title="Clear" id="WlH-SB-YhB">
+                                                <connections>
+                                                    <action selector="clearTextView:" destination="VPF-I9-TR0" id="zfp-aw-Clm"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1Wa-YM-ruY">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="750" constant="128" id="Y4h-OC-04d"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="VPF-I9-TR0" id="SsR-6e-xmQ"/>
+                                        </connections>
+                                    </textView>
+                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tWl-R1-Fbg">
+                                        <rect key="frame" x="0.0" y="180" width="414" height="18"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTc-me-p6z">
+                                                <rect key="frame" x="188.5" y="0.0" width="37.5" height="18"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="XGd-lk-RW6" firstAttribute="top" secondItem="Wpb-DS-dyr" secondAttribute="top" id="9hW-Lr-gyN"/>
+                            <constraint firstItem="XGd-lk-RW6" firstAttribute="leading" secondItem="Wpb-DS-dyr" secondAttribute="leading" id="Ayi-oN-rP1"/>
+                            <constraint firstItem="XGd-lk-RW6" firstAttribute="trailing" secondItem="Wpb-DS-dyr" secondAttribute="trailing" id="tJT-F1-qZJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wpb-DS-dyr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="V3a-7V-TY7"/>
+                    <connections>
+                        <outlet property="accessoryToolbar" destination="V1u-zb-Pge" id="2g2-6k-Lcf"/>
+                        <outlet property="controlContentView" destination="atx-vI-LDe" id="cUi-56-fPj"/>
+                        <outlet property="deleteItem" destination="odP-XH-oPi" id="xBV-9M-A7p"/>
+                        <outlet property="statusLabel" destination="TTc-me-p6z" id="twO-qC-aT5"/>
+                        <outlet property="textView" destination="1Wa-YM-ruY" id="RkB-OF-fcL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g7u-S7-CkW" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="V1u-zb-Pge">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem enabled="NO" title="delete" id="odP-XH-oPi">
+                            <connections>
+                                <action selector="deleteCharOnTextView:" destination="VPF-I9-TR0" id="16G-Ed-IFM"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="hhf-Dj-O4P"/>
+                        <barButtonItem systemItem="done" id="AMf-ad-oD0">
+                            <connections>
+                                <action selector="textViewEndEditing:" destination="VPF-I9-TR0" id="kQ3-Hk-gBd"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="atx-vI-LDe">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vvd-gz-0vD">
+                            <rect key="frame" x="16" y="0.0" width="208" height="128"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9ou-tQ-k4E">
+                                    <rect key="frame" x="0.0" y="0.0" width="208" height="128"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="A9L-da-Zpe">
+                                            <rect key="frame" x="0.0" y="0.0" width="208" height="33"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="II0-I9-ynS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="52" height="33"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <state key="normal" title="{"/>
+                                                    <connections>
+                                                        <action selector="keystrokeEnter:" destination="VPF-I9-TR0" eventType="touchUpInside" id="p5X-1p-Hum"/>
+                                                        <action selector="selectionTouchedDown:" destination="VPF-I9-TR0" eventType="touchDown" id="2qT-Pu-fRw"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6Z-EJ-n1r">
+                                                    <rect key="frame" x="52" y="0.0" width="52" height="33"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <state key="normal" title="["/>
+                                                    <connections>
+                                                        <action selector="keystrokeEnter:" destination="VPF-I9-TR0" eventType="touchUpInside" id="z6X-Dc-1oR"/>
+                                                        <action selector="selectionTouchedDown:" destination="VPF-I9-TR0" eventType="touchDown" id="Adr-n7-mAB"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYq-cl-7Z9">
+                                                    <rect key="frame" x="104" y="0.0" width="52" height="33"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <state key="normal" title="("/>
+                                                    <connections>
+                                                        <action selector="keystrokeEnter:" destination="VPF-I9-TR0" eventType="touchUpInside" id="45n-zR-jUi"/>
+                                                        <action selector="selectionTouchedDown:" destination="VPF-I9-TR0" eventType="touchDown" id="gfK-ws-tvz"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOQ-hj-RHr">
+                                                    <rect key="frame" x="156" y="0.0" width="52" height="33"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <state key="normal" title="&lt;"/>
+                                                    <connections>
+                                                        <action selector="keystrokeEnter:" destination="VPF-I9-TR0" eventType="touchUpInside" id="otX-Ik-TvH"/>
+                                                        <action selector="selectionTouchedDown:" destination="VPF-I9-TR0" eventType="touchDown" id="Vmm-M5-AaF"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4BG-f1-BQ1">
+                                            <rect key="frame" x="0.0" y="95" width="208" height="33"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9n-y6-wNt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="52" height="33"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <state key="normal" title="}"/>
+                                                    <connections>
+                                                        <action selector="keystrokeEnter:" destination="VPF-I9-TR0" eventType="touchUpInside" id="gnR-SZ-dij"/>
+                                                        <action selector="selectionTouchedDown:" destination="VPF-I9-TR0" eventType="touchDown" id="nEO-Tt-cpP"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAA-P4-BC4">
+                                                    <rect key="frame" x="52" y="0.0" width="52" height="33"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <state key="normal" title="]"/>
+                                                    <connections>
+                                                        <action selector="keystrokeEnter:" destination="VPF-I9-TR0" eventType="touchUpInside" id="aQ7-Lk-pSf"/>
+                                                        <action selector="selectionTouchedDown:" destination="VPF-I9-TR0" eventType="touchDown" id="fig-a9-CFa"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAh-ZM-gil">
+                                                    <rect key="frame" x="104" y="0.0" width="52" height="33"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <state key="normal" title=")"/>
+                                                    <connections>
+                                                        <action selector="keystrokeEnter:" destination="VPF-I9-TR0" eventType="touchUpInside" id="Kae-Oq-Epo"/>
+                                                        <action selector="selectionTouchedDown:" destination="VPF-I9-TR0" eventType="touchDown" id="oPm-il-qKy"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqJ-tn-FXc">
+                                                    <rect key="frame" x="156" y="0.0" width="52" height="33"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <state key="normal" title="&gt;"/>
+                                                    <connections>
+                                                        <action selector="keystrokeEnter:" destination="VPF-I9-TR0" eventType="touchUpInside" id="mKc-1Y-d4E"/>
+                                                        <action selector="selectionTouchedDown:" destination="VPF-I9-TR0" eventType="touchDown" id="k6D-On-RQb"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="vvd-gz-0vD" firstAttribute="leading" secondItem="atx-vI-LDe" secondAttribute="leadingMargin" id="ZPm-Lq-ruY"/>
+                        <constraint firstAttribute="trailingMargin" secondItem="vvd-gz-0vD" secondAttribute="trailing" id="vLY-nf-fQN"/>
+                        <constraint firstItem="vvd-gz-0vD" firstAttribute="top" secondItem="atx-vI-LDe" secondAttribute="topMargin" id="voN-jr-RP1"/>
+                        <constraint firstAttribute="bottomMargin" secondItem="vvd-gz-0vD" secondAttribute="bottom" id="xU0-7j-OCs"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="translatesAutoresizingMaskIntoConstraints" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+</document>
